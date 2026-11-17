@@ -108,14 +108,14 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--green-leaf);
+  color: var(--text-main);
 }
 
 .brand-name {
   font-family: "Outfit", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--green-leaf);
   line-height: 1.25;
 }
 
