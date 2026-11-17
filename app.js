@@ -45,6 +45,15 @@ const MATERIALS = [
     desc: "Dokumen acuan penyusunan dan pengembangan Kurikulum Satuan Pendidikan (KSP) tahun 2025.",
     file: "Panduan_Kurikulum_Satuan_Pendidikan_2025.pdf",
     size: "10.3 MB"
+  },
+  {
+    id: "blueprint-stem-pejuang-iklim",
+    category: "panduan",
+    badge: "Panduan Pendukung",
+    title: "Blueprint STEM Pejuang Iklim",
+    desc: "Rancangan dan panduan pembelajaran STEM Pejuang Iklim untuk mendukung aksi proyek peserta didik.",
+    file: "Blueprint_STEM_Pejuang_Iklim.pdf",
+    size: "15.7 MB"
   }
 ];
 
