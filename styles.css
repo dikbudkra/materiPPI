@@ -50,7 +50,7 @@ body {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.045;
+  opacity: 0.07;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230F5132' stroke-width='1.2'%3E%3Cellipse cx='40' cy='20' rx='10' ry='18'/%3E%3Cellipse cx='40' cy='60' rx='10' ry='18'/%3E%3Cellipse cx='20' cy='40' rx='18' ry='10'/%3E%3Cellipse cx='60' cy='40' rx='18' ry='10'/%3E%3Ccircle cx='40' cy='40' r='5' fill='%23B4832C' fill-opacity='0.35'/%3E%3Ccircle cx='0' cy='0' r='6'/%3E%3Ccircle cx='80' cy='0' r='6'/%3E%3Ccircle cx='0' cy='80' r='6'/%3E%3Ccircle cx='80' cy='80' r='6'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 80px 80px;
 }
