@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Pendidikan Perubahan Iklim — Dinas Pendidikan dan Kebudayaan Kabupaten Karanganyar</title>
+  <meta name="description" content="Portal Materi Workshop Pendidikan Perubahan Iklim (PPI) - Dinas Pendidikan dan Kebudayaan Kabupaten Karanganyar. Mari wujudkan Pendidikan Perubahan Iklim sebagai gerakan bersama untuk generasi hari ini dan yang akan datang!" />
+  <meta name="theme-color" content="#0F5132" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- QR Code Library (Lightweight Canvas/SVG Generator) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle Batik Ornament Background Layer -->
+  <div class="batik-bg" aria-hidden="true"></div>
+
+  <!-- Top Institutional Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img
+          src="https://lh3.googleusercontent.com/d/1e1LH5ZgYyLjclSNXwMAU5Zy_PKiju5z-"
+          alt="Logo Kabupaten Karanganyar"
+          class="brand-logo"
+          loading="eager"
+          referrerpolicy="no-referrer"
+        />
+        <div class="brand-text">
+          <span class="brand-kicker">Portal Materi Workshop</span>
+          <span class="brand-name">DINAS PENDIDIKAN DAN KEBUDAYAAN KABUPATEN KARANGANYAR</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="btn-qr-trigger" id="openQrModalBtn" aria-label="Tampilkan QR Code Web">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <path d="M14 14h3v3h-3z" />
+            <path d="M17 17h4v4h-4z" />
+            <path d="M14 20h1" />
+            <path d="M20 14h1" />
+          </svg>
+          <span>QR Code</span>
+        </button>
+      </div>
+    </div>
+    <!-- Subtle Batik Border Accent -->
+    <div class="batik-strip" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Gerakan Sekolah Beraksi untuk Iklim</span>
+          </div>
+          <h1 class="hero-title">PENDIDIKAN PERUBAHAN IKLIM</h1>
+          <p class="hero-tagline">
+            Mari wujudkan Pendidikan Perubahan Iklim sebagai gerakan bersama untuk generasi hari ini dan yang akan datang!
+          </p>
+          <div class="hero-cta">
+            <a href="#materi" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Unduh Materi Workshop</span>
+            </a>
+            <a href="#kerangka" class="btn btn-secondary">
+              <span>Lihat Infografis PPI</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <strong>5</strong>
+              <span>Dokumen PDF</span>
+            </div>
+            <div class="stat-pill">
+              <strong>3</strong>
+              <span>Modul Utama PPI</span>
+            </div>
+            <div class="stat-pill">
+              <strong>2</strong>
+              <span>Panduan Pendukung</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR Code Card for Quick Sharing -->
+        <aside class="hero-qr-card" aria-label="QR Code Akses Cepat">
+          <div class="qr-card-header">
+            <span class="qr-badge">Scan untuk Akses</span>
+            <p class="qr-url-label">dikbudkra.github.io/materiPPI</p>
+          </div>
+          <div class="qr-box" id="heroQrContainer" title="QR Code Materi PPI"></div>
+          <div class="qr-card-actions">
+            <button type="button" class="btn-mini" id="downloadQrBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Unduh QR</span>
+            </button>
+            <button type="button" class="btn-mini" id="copyLinkBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+              <span>Salin Link</span>
+            </button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Download Center Section -->
+    <section id="materi" class="section materi-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">Pusat Unduhan Peserta</span>
+            <h2 class="section-title">Materi &amp; Panduan Workshop</h2>
+            <p class="section-desc">
+              Silakan pratinjau atau unduh langsung seluruh modul dan panduan berikut ke perangkat Anda.
+            </p>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="toolbar">
+          <div class="filter-tabs" role="tablist" aria-label="Filter kategori materi">
+            <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">Semua (5)</button>
+            <button type="button" class="filter-tab" data-filter="modul" role="tab" aria-selected="false">Modul PPI (3)</button>
+            <button type="button" class="filter-tab" data-filter="panduan" role="tab" aria-selected="false">Panduan (2)</button>
+          </div>
+
+          <div class="search-box">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="search" id="searchInput" placeholder="Cari judul modul atau panduan..." aria-label="Cari materi" />
+          </div>
+        </div>
+
+        <!-- Materials Grid (populated by app.js) -->
+        <div class="materi-grid" id="materiGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>Tidak ada materi yang cocok dengan pencarian Anda.</p>
+      </div>
+    </section>
+
+    <!-- Infographic & Framework Section -->
+    <section id="kerangka" class="section kerangka-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">Kerangka Implementasi</span>
+            <h2 class="section-title">Implementasi PPI dalam Proses Pembelajaran</h2>
+            <p class="section-desc">
+              Pendidikan Perubahan Iklim (PPI) diintegrasikan secara utuh melalui jalur intrakurikuler, kokurikuler, dan ekstrakurikuler yang bermuara pada budaya sekolah.
+            </p>
+          </div>
+        </div>
+
+        <div class="infographic-card">
+          <button type="button" class="infographic-frame" id="openLightboxBtn" aria-label="Perbesar infografis Implementasi PPI">
+            <img
+              src="foto%201.png"
+              alt="Infografis Implementasi Pendidikan Perubahan Iklim dalam Proses Pembelajaran"
+              class="infographic-img"
+              loading="lazy"
+            />
+            <span class="zoom-hint">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+              </svg>
+              <span>Klik untuk perbesar gambar</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- 3 Jalur + Budaya Sekolah + 4 Pilar -->
+        <div class="pillars-layout">
+          <div class="jalur-grid">
+            <article class="jalur-card jalur-intra">
+              <span class="jalur-tag">Intrakurikuler</span>
+              <h3>Pembelajaran Terintegrasi</h3>
+              <p>Pembelajaran IPA/Matematika dan analisis penggunaan listrik secara kontekstual di kelas.</p>
+            </article>
+            <article class="jalur-card jalur-ko">
+              <span class="jalur-tag">Kokurikuler</span>
+              <h3>Proyek &amp; Solusi</h3>
+              <p>Menghitung penggunaan energi listrik dan perancangan solusi berbasis projek nyata.</p>
+            </article>
+            <article class="jalur-card jalur-ekstra">
+              <span class="jalur-tag">Ekstrakurikuler</span>
+              <h3>Inovasi Siswa</h3>
+              <p>Pengembangan prototipe kreatif, seperti mengubah air hujan menjadi energi listrik.</p>
+            </article>
+            <article class="jalur-card jalur-budaya">
+              <span class="jalur-tag">Budaya Sekolah</span>
+              <h3>Pembiasaan Berkelanjutan</h3>
+              <p>Pembiasaan sehari-hari dan kebijakan sekolah hemat listrik secara kolektif.</p>
+            </article>
+          </div>
+
+          <aside class="kompetensi-card">
+            <h3>4 Pilar Kompetensi PPI</h3>
+            <ul class="kompetensi-list">
+              <li>
+                <span class="komp-num">01</span>
+                <span>Paham Isu Iklim</span>
+              </li>
+              <li>
+                <span class="komp-num">02</span>
+                <span>Kritis dan Inovatif</span>
+              </li>
+              <li>
+                <span class="komp-num">03</span>
+                <span>Peduli dan Kolaboratif</span>
+              </li>
+              <li>
+                <span class="komp-num">04</span>
+                <span>Bertindak untuk Perubahan</span>
+              </li>
+            </ul>
+            <blockquote class="kompetensi-quote">
+              “Pembelajaran hari ini, untuk bumi yang lebih baik esok nanti.”
+            </blockquote>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fixed Bottom Footer (Always visible even when scrolling) -->
+  <footer class="fixed-footer" role="contentinfo">
+    <div class="fixed-footer-batik" aria-hidden="true"></div>
+    <div class="container fixed-footer-inner">
+      <span class="footer-label">DIGITALLY SHAPED BY</span>
+      <img
+        src="https://i.ibb.co.com/KpqwmHd6/Logo-Jemprot-2-1-removebg-preview.png"
+        alt="Logo Jemprot"
+        class="footer-logo"
+        referrerpolicy="no-referrer"
+      />
+      <span class="footer-unit">BID SMP 2026</span>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Infographic -->
+  <div class="modal" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+    <div class="modal-backdrop" data-close="lightboxModal"></div>
+    <div class="modal-content modal-lightbox">
+      <div class="modal-header">
+        <h3 id="lightboxTitle">Infografis Implementasi PPI</h3>
+        <button type="button" class="modal-close" data-close="lightboxModal" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <img src="foto%201.png" alt="Infografis Implementasi Pendidikan Perubahan Iklim" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen QR Code Modal -->
+  <div class="modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle" hidden>
+    <div class="modal-backdrop" data-close="qrModal"></div>
+    <div class="modal-content modal-qr">
+      <div class="modal-header">
+        <h3 id="qrModalTitle">QR Code Portal Materi PPI</h3>
+        <button type="button" class="modal-close" data-close="qrModal" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="qr-modal-body">
+        <p class="qr-modal-instansi">Dinas Pendidikan dan Kebudayaan Kabupaten Karanganyar</p>
+        <div class="qr-modal-box" id="modalQrContainer"></div>
+        <p class="qr-modal-url">https://dikbudkra.github.io/materiPPI/</p>
+        <div class="qr-modal-actions">
+          <button type="button" class="btn btn-primary" id="modalDownloadQrBtn">Unduh Gambar QR (PNG)</button>
+          <button type="button" class="btn btn-secondary" id="modalCopyLinkBtn">Salin Tautan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
