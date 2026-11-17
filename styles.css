@@ -156,9 +156,26 @@ body {
 /* Hero Section */
 .hero {
   padding: 40px 0 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-batik-ornament {
+  position: absolute;
+  top: -36px;
+  left: -36px;
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230F5132' stroke-width='1.8'%3E%3Ccircle cx='120' cy='120' r='105' stroke-dasharray='6 6'/%3E%3Ccircle cx='120' cy='120' r='78'/%3E%3Cellipse cx='120' cy='60' rx='22' ry='42' fill='%23B4832C' fill-opacity='0.18'/%3E%3Cellipse cx='120' cy='180' rx='22' ry='42' fill='%23B4832C' fill-opacity='0.18'/%3E%3Cellipse cx='60' cy='120' rx='42' ry='22' fill='%230F5132' fill-opacity='0.14'/%3E%3Cellipse cx='180' cy='120' rx='42' ry='22' fill='%230F5132' fill-opacity='0.14'/%3E%3Ccircle cx='120' cy='120' r='16' fill='%23B4832C' fill-opacity='0.45'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.4fr 0.8fr;
   gap: 28px;
@@ -295,6 +312,20 @@ body {
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--green-leaf), var(--gold-batik), var(--blue-sky));
+}
+
+.hero-qr-card::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 96px;
+  height: 96px;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: url("data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23B4832C' stroke-width='1.8'%3E%3Cellipse cx='48' cy='22' rx='10' ry='20'/%3E%3Cellipse cx='48' cy='74' rx='10' ry='20'/%3E%3Cellipse cx='22' cy='48' rx='20' ry='10'/%3E%3Cellipse cx='74' cy='48' rx='20' ry='10'/%3E%3Ccircle cx='48' cy='48' r='8' fill='%230F5132' fill-opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .qr-badge {
@@ -677,6 +708,8 @@ body {
 }
 
 .kompetensi-card {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(160deg, var(--green-deep) 0%, #0b3b25 100%);
   color: #ffffff;
   border-radius: var(--radius-md);
@@ -685,6 +718,42 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: var(--shadow-md);
+}
+
+.kompetensi-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FDE68A' stroke-width='1.2'%3E%3Cellipse cx='36' cy='18' rx='9' ry='16'/%3E%3Cellipse cx='36' cy='54' rx='9' ry='16'/%3E%3Cellipse cx='18' cy='36' rx='16' ry='9'/%3E%3Cellipse cx='54' cy='36' rx='16' ry='9'/%3E%3Ccircle cx='36' cy='36' r='4.5' fill='%23FDE68A' fill-opacity='0.45'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 72px 72px;
+}
+
+.kompetensi-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Batik Section Divider */
+.batik-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.batik-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(180, 131, 44, 0.45), transparent);
+}
+
+.batik-divider-icon {
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .kompetensi-card h3 {
